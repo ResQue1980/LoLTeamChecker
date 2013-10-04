@@ -1,0 +1,4 @@
+LoLTeamChecker
+==============
+
+LoLNotes ripoff
