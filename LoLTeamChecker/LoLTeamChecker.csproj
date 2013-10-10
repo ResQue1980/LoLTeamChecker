@@ -1,0 +1,1553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E5AB8F67-7BBC-48DF-9A1D-8D0D3DE685DD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LoLTeamChecker</RootNamespace>
+    <AssemblyName>LoLTeamChecker</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <FileAlignment>512</FileAlignment>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Testing|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Testing\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;TESTING</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\LoLNotes.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LoLTeamChecker.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="antlr.runtime\antlr.collections.impl\ASTArray.cs" />
+    <Compile Include="antlr.runtime\antlr.collections.impl\BitSet.cs" />
+    <Compile Include="antlr.runtime\antlr.collections\AST.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ANTLREventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\DebuggingCharScanner.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\DebuggingInputBuffer.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\DebuggingParser.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\GuessingEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ICharScannerDebugSubject.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\IDebugSubject.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\InputBufferEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\InputBufferEventSupport.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\InputBufferListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\InputBufferListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\InputBufferReporter.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\IParserDebugSubject.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\Listener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\LLkDebuggingParser.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\MessageEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\MessageListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\MessageListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\NewLineEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\NewLineListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserController.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserEventSupport.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserMatchEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserMatchListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserMatchListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserReporter.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserTokenEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserTokenListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParserTokenListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ParseTreeDebugParser.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\ScannerEventSupport.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\SemanticPredicateEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\SemanticPredicateListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\SemanticPredicateListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\SyntacticPredicateEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\SyntacticPredicateListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\SyntacticPredicateListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\TraceEventArgs.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\TraceListener.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\TraceListenerBase.cs" />
+    <Compile Include="antlr.runtime\antlr.debug\Tracer.cs" />
+    <Compile Include="antlr.runtime\antlr\ANTLRException.cs" />
+    <Compile Include="antlr.runtime\antlr\ANTLRPanicException.cs" />
+    <Compile Include="antlr.runtime\antlr\ASTFactory.cs" />
+    <Compile Include="antlr.runtime\antlr\ASTNodeCreator.cs" />
+    <Compile Include="antlr.runtime\antlr\ASTNULLType.cs" />
+    <Compile Include="antlr.runtime\antlr\ASTPair.cs" />
+    <Compile Include="antlr.runtime\antlr\ASTVisitor.cs" />
+    <Compile Include="antlr.runtime\antlr\BaseAST.cs" />
+    <Compile Include="antlr.runtime\antlr\ByteBuffer.cs" />
+    <Compile Include="antlr.runtime\antlr\CharBuffer.cs" />
+    <Compile Include="antlr.runtime\antlr\CharQueue.cs" />
+    <Compile Include="antlr.runtime\antlr\CharScanner.cs" />
+    <Compile Include="antlr.runtime\antlr\CharStreamException.cs" />
+    <Compile Include="antlr.runtime\antlr\CharStreamIOException.cs" />
+    <Compile Include="antlr.runtime\antlr\CommonAST.cs" />
+    <Compile Include="antlr.runtime\antlr\CommonASTWithHiddenTokens.cs" />
+    <Compile Include="antlr.runtime\antlr\CommonHiddenStreamToken.cs" />
+    <Compile Include="antlr.runtime\antlr\CommonToken.cs" />
+    <Compile Include="antlr.runtime\antlr\DefaultFileLineFormatter.cs" />
+    <Compile Include="antlr.runtime\antlr\DumpASTVisitor.cs" />
+    <Compile Include="antlr.runtime\antlr\FileLineFormatter.cs" />
+    <Compile Include="antlr.runtime\antlr\IHiddenStreamToken.cs" />
+    <Compile Include="antlr.runtime\antlr\InputBuffer.cs" />
+    <Compile Include="antlr.runtime\antlr\IToken.cs" />
+    <Compile Include="antlr.runtime\antlr\LexerSharedInputState.cs" />
+    <Compile Include="antlr.runtime\antlr\LLkParser.cs" />
+    <Compile Include="antlr.runtime\antlr\MismatchedCharException.cs" />
+    <Compile Include="antlr.runtime\antlr\MismatchedTokenException.cs" />
+    <Compile Include="antlr.runtime\antlr\NoViableAltException.cs" />
+    <Compile Include="antlr.runtime\antlr\NoViableAltForCharException.cs" />
+    <Compile Include="antlr.runtime\antlr\Parser.cs" />
+    <Compile Include="antlr.runtime\antlr\ParserSharedInputState.cs" />
+    <Compile Include="antlr.runtime\antlr\ParseTree.cs" />
+    <Compile Include="antlr.runtime\antlr\ParseTreeRule.cs" />
+    <Compile Include="antlr.runtime\antlr\ParseTreeToken.cs" />
+    <Compile Include="antlr.runtime\antlr\RecognitionException.cs" />
+    <Compile Include="antlr.runtime\antlr\SemanticException.cs" />
+    <Compile Include="antlr.runtime\antlr\StringUtils.cs" />
+    <Compile Include="antlr.runtime\antlr\Token.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenBuffer.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenCreator.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenQueue.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStream.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamBasicFilter.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamException.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamHiddenTokenFilter.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamIOException.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamRecognitionException.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamRetryException.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamRewriteEngine.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenStreamSelector.cs" />
+    <Compile Include="antlr.runtime\antlr\TokenWithIndex.cs" />
+    <Compile Include="antlr.runtime\antlr\TreeParser.cs" />
+    <Compile Include="antlr.runtime\antlr\TreeParserSharedInputState.cs" />
+    <Compile Include="antlr.runtime\AssemblyInfo.cs" />
+    <Compile Include="antlr.runtime\SupportClass.cs" />
+    <Compile Include="Assets\ChampIcons.cs" />
+    <Compile Include="Assets\ChampNames.cs" />
+    <Compile Include="Assets\DescriptionEnumTypeConverter.cs" />
+    <Compile Include="Assets\SpellIcons.cs" />
+    <Compile Include="Assets\StatsData.cs" />
+    <Compile Include="Content\Data\ChampIds.cs" />
+    <Compile Include="Extensions\TableLayoutPanelExt.cs" />
+    <Compile Include="Flash\BaseList.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\ArrayCollection.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\ByteArray.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\ClassDefinition.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\DataInput.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\DataOutput.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\IDataInput.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\IDataOutput.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\IExternalizable.cs" />
+    <Compile Include="FlourineFx-3.5\AMF3\ObjectProxy.cs" />
+    <Compile Include="FlourineFx-3.5\ASObject.cs" />
+    <Compile Include="FlourineFx-3.5\AsyncHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\ActivationAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\DataSetTypeAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\DataTableTypeAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\PageSizeAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\RemotingServiceAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\RoleAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\TransferObjectAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Attribute\TransientAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Browser\IServiceBrowserRenderer.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\CollectionComparer.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\CopyOnWriteArray.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\CopyOnWriteArraySet.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\CopyOnWriteDictionary.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Generic\CollectionBase.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Generic\ConcurrentLinkedQueue.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Generic\CopyOnWriteArray.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Generic\CopyOnWriteArraySet.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Generic\CopyOnWriteDictionary.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Generic\IQueue.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Generic\ReadOnlyCollection.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\IModifiableCollection.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Inserter.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\IOutputIterator.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\IReversible.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\ISet.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\LinkedList.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\RbTree.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\RbTreeNode.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\ReadOnlyCollection.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\ReadOnlyList.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\ReversedTree.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\Set.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\SetBase.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\SetEnumerator.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\SetOp.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\SynchronizedDictionaryEnumerator.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\SynchronizedEnumerator.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\SynchronizedHashtable.cs" />
+    <Compile Include="FlourineFx-3.5\Collections\TreeSet.cs" />
+    <Compile Include="FlourineFx-3.5\Configuration\ApplicationConfiguration.cs" />
+    <Compile Include="FlourineFx-3.5\Configuration\CacheMap.cs" />
+    <Compile Include="FlourineFx-3.5\Configuration\FluorineConfiguration.cs" />
+    <Compile Include="FlourineFx-3.5\Configuration\FluorineSettings.cs" />
+    <Compile Include="FlourineFx-3.5\Configuration\XmlConfigurator.cs" />
+    <Compile Include="FlourineFx-3.5\Constants.cs" />
+    <Compile Include="FlourineFx-3.5\Context\ApplicationState.cs" />
+    <Compile Include="FlourineFx-3.5\Context\ConnectionSession.cs" />
+    <Compile Include="FlourineFx-3.5\Context\FileSystemResource.cs" />
+    <Compile Include="FlourineFx-3.5\Context\FluorineContext.cs" />
+    <Compile Include="FlourineFx-3.5\Context\FluorineRtmpContext.cs" />
+    <Compile Include="FlourineFx-3.5\Context\FluorineWebContext.cs" />
+    <Compile Include="FlourineFx-3.5\Context\HttpApplicationStateWrapper.cs" />
+    <Compile Include="FlourineFx-3.5\Context\HttpSession.cs" />
+    <Compile Include="FlourineFx-3.5\Context\HttpSessionStateWrapper.cs" />
+    <Compile Include="FlourineFx-3.5\Context\IApplicationState.cs" />
+    <Compile Include="FlourineFx-3.5\Context\IResource.cs" />
+    <Compile Include="FlourineFx-3.5\Context\ISessionState.cs" />
+    <Compile Include="FlourineFx-3.5\Context\RtmpApplicationState.cs" />
+    <Compile Include="FlourineFx-3.5\Context\Session.cs" />
+    <Compile Include="FlourineFx-3.5\Context\SessionManager.cs" />
+    <Compile Include="FlourineFx-3.5\Context\WebSafeCallContext.cs" />
+    <Compile Include="FlourineFx-3.5\Context\_TimeoutContext.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Assemblers\Assembler.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Assemblers\IAssembler.cs" />
+    <Compile Include="FlourineFx-3.5\Data\DataDestination.cs" />
+    <Compile Include="FlourineFx-3.5\Data\DataService.cs" />
+    <Compile Include="FlourineFx-3.5\Data\DataServiceException.cs" />
+    <Compile Include="FlourineFx-3.5\Data\DataServiceTransaction.cs" />
+    <Compile Include="FlourineFx-3.5\Data\DataSyncException.cs" />
+    <Compile Include="FlourineFx-3.5\Data\DotNetAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Identity.cs" />
+    <Compile Include="FlourineFx-3.5\Data\ItemWrapper.cs" />
+    <Compile Include="FlourineFx-3.5\Data\ListComparer.cs" />
+    <Compile Include="FlourineFx-3.5\Data\ListHashCodeProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Data\MessageBatch.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Messages\DataErrorMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Messages\DataMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Messages\PagedMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Messages\SequencedMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Messages\UpdateCollectionMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Data\Sequence.cs" />
+    <Compile Include="FlourineFx-3.5\Data\SequenceManager.cs" />
+    <Compile Include="FlourineFx-3.5\Data\UpdateCollectionRange.cs" />
+    <Compile Include="FlourineFx-3.5\DateWrapper.cs" />
+    <Compile Include="FlourineFx-3.5\Diagnostic\AMFRequestHeaders.cs" />
+    <Compile Include="FlourineFx-3.5\Diagnostic\DebugEvent.cs" />
+    <Compile Include="FlourineFx-3.5\Diagnostic\DescribeService.cs" />
+    <Compile Include="FlourineFx-3.5\Diagnostic\HttpHeader.cs" />
+    <Compile Include="FlourineFx-3.5\Diagnostic\NetDebug.cs" />
+    <Compile Include="FlourineFx-3.5\Diagnostic\TraceHeader.cs" />
+    <Compile Include="FlourineFx-3.5\ExceptionASO.cs" />
+    <Compile Include="FlourineFx-3.5\Exceptions\ClientRejectedException.cs" />
+    <Compile Include="FlourineFx-3.5\Exceptions\FluorineException.cs" />
+    <Compile Include="FlourineFx-3.5\Exceptions\IllegalStateException.cs" />
+    <Compile Include="FlourineFx-3.5\Exceptions\ProtocolException.cs" />
+    <Compile Include="FlourineFx-3.5\Exceptions\ServiceNotFoundException.cs" />
+    <Compile Include="FlourineFx-3.5\Exceptions\UnexpectedAMF.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\BaseNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\BinaryOperator.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\BooleanLiteralNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\DateLiteralNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\Expression.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\ExpressionEvaluator.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\ExpressionLexer.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\ExpressionParser.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\FluorineAST.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\FunctionNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\HexLiteralNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\IExpression.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\IntLiteralNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\ListInitializerNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\NodeWithArguments.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\NullLiteralNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpADD.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpAND.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpBetween.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpDIVIDE.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpEqual.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpGreater.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpGreaterOrEqual.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpIn.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpIs.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpLess.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpLessOrEqual.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpLike.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpMODULUS.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpMULTIPLY.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpNOT.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpNotEqual.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpOR.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpPOWER.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpSUBTRACT.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpUnaryMinus.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\OpUnaryPlus.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\RealLiteralNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\StringLiteralNode.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\UnaryOperator.cs" />
+    <Compile Include="FlourineFx-3.5\Expression\VariableNode.cs" />
+    <Compile Include="FlourineFx-3.5\FluorineGateway.cs" />
+    <Compile Include="FlourineFx-3.5\HttpCompress\CompressingFilter.cs" />
+    <Compile Include="FlourineFx-3.5\HttpCompress\DeflateFilter.cs" />
+    <Compile Include="FlourineFx-3.5\HttpCompress\GZipFilter.cs" />
+    <Compile Include="FlourineFx-3.5\HttpCompress\GZipOutputStreamEx.cs" />
+    <Compile Include="FlourineFx-3.5\HttpCompress\HttpCompressSettings.cs" />
+    <Compile Include="FlourineFx-3.5\HttpCompress\HttpOutputFilter.cs" />
+    <Compile Include="FlourineFx-3.5\HttpCompress\ThresholdFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Invocation\IInvocationCallback.cs" />
+    <Compile Include="FlourineFx-3.5\Invocation\IInvocationManager.cs" />
+    <Compile Include="FlourineFx-3.5\Invocation\IInvocationResultHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Invocation\InvocationHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Invocation\InvocationManager.cs" />
+    <Compile Include="FlourineFx-3.5\IO\AMFBody.cs" />
+    <Compile Include="FlourineFx-3.5\IO\AMFDeserializer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\AMFHeader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\AMFMessage.cs" />
+    <Compile Include="FlourineFx-3.5\IO\AMFReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\AMFSerializer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\AMFWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ASObjectProxy.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\CodeDom\AMF0ReflectionOptimizer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\CodeDom\AMF3ReflectionOptimizer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\CodeDom\BytecodeProvider.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\IBytecodeProvider.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\IReflectionOptimizer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\Lightweight\AMF0ReflectionOptimizer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\Lightweight\AMF3ReflectionOptimizer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Bytecode\Lightweight\BytecodeProvider.cs" />
+    <Compile Include="FlourineFx-3.5\IO\CacheableObject.cs" />
+    <Compile Include="FlourineFx-3.5\IO\CachedBody.cs" />
+    <Compile Include="FlourineFx-3.5\IO\EntityObjectProxy.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ErrorResponseBody.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ExceptionProxy.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ExternalizableProxy.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\Flv.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\FlvHeader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\FlvReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\FlvWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\IFlv.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\MetaCue.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\MetaData.cs" />
+    <Compile Include="FlourineFx-3.5\IO\FLV\MetaService.cs" />
+    <Compile Include="FlourineFx-3.5\IO\IKeyFrameDataAnalyzer.cs" />
+    <Compile Include="FlourineFx-3.5\IO\IObjectProxy.cs" />
+    <Compile Include="FlourineFx-3.5\IO\IOConstants.cs" />
+    <Compile Include="FlourineFx-3.5\IO\IStreamableFile.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ITag.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ITagReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ITagWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\KeyFrameMeta.cs" />
+    <Compile Include="FlourineFx-3.5\IO\M4a\IM4a.cs" />
+    <Compile Include="FlourineFx-3.5\IO\M4a\M4a.cs" />
+    <Compile Include="FlourineFx-3.5\IO\M4a\M4aReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\MessageOutput.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp3\IMp3File.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp3\Mp3File.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp3\Mp3Header.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp3\Mp3Reader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp4\IMp4.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp4\Mp4.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp4\Mp4Atom.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp4\Mp4DataStream.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp4\Mp4Descriptor.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp4\Mp4Frame.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Mp4\Mp4Reader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ObjectProxy.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ObjectProxyRegistry.cs" />
+    <Compile Include="FlourineFx-3.5\IO\RawBinary.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0AMF3TagReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0ArrayReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0ASObjectReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0AssociativeArrayReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0BooleanReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0DateTimeReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0LongStringReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0NullReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0NumberReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0ObjectReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0OptimizedObjectReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0ReferenceReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0StringReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0TypedASObjectReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF0\AMF0XmlReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3ArrayReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3BooleanFalseReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3BooleanTrueReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3ByteArrayReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3DateTimeReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3ExternalizableReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3IntegerReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3NullReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3NumberReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3ObjectReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3OptimizedObjectReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3StringReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3TypedASObjectReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3VectorReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMF3\AMF3XmlReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\AMFUnknownTagReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Readers\IAMFReader.cs" />
+    <Compile Include="FlourineFx-3.5\IO\ResponseBody.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Tag.cs" />
+    <Compile Include="FlourineFx-3.5\IO\WcfProxy.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0AMF3TagWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0ArrayWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0ASObjectWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0BooleanWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0CacheResultWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0CharWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0DataSetWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0DataTableWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0DateTimeWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0DBNullWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0EnumWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0GuidWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0NameObjectCollectionWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0NullWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0NumberWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0ObjectWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0SqlTypesWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0StringWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0XDocumentWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0XElementWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF0\AMF0XmlDocumentWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3ArrayWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3ASObjectWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3BooleanWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3ByteArrayWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3CacheResultWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3CharWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3DataSetWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3DataTableWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3DateTimeWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3DBNullWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3DoubleWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3EnumWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3GuidWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3IntWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3NameObjectCollectionWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3ObjectWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3SqlTypesWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3StringWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3VectorWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3XDocumentWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3XElementWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\AMF3\AMF3XmlDocumentWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\IAMFWriter.cs" />
+    <Compile Include="FlourineFx-3.5\IO\Writers\RawBinaryWriter.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Identifier.cs" />
+    <Compile Include="FlourineFx-3.5\Json\IJsonRpcProxyGenerator.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JavaScriptArray.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JavaScriptConstructor.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JavaScriptConvert.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JavaScriptObject.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JavaScriptParameters.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JavaScriptUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonConverter.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonConverterCollection.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonIgnoreAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonPropertyAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonReader.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonReaderException.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonRpcMethodAttribute.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonSerializationException.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonSerializer.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonToken.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonWriter.cs" />
+    <Compile Include="FlourineFx-3.5\Json\JsonWriterException.cs" />
+    <Compile Include="FlourineFx-3.5\Json\MemberMapping.cs" />
+    <Compile Include="FlourineFx-3.5\Json\MemberMappingCollection.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\DefaultJsonRpcProxyGenerator.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\JsonRpcError.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\JsonRpcException.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\JsonRpcExecutive.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\JsonRpcHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\JsonRpcProxyGenerator.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\JsonRpcServiceFeature.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Rpc\JsonRpcServiceReflector.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Services\DuplicateMethodException.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Services\Method.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Services\Parameter.cs" />
+    <Compile Include="FlourineFx-3.5\Json\Services\ServiceClass.cs" />
+    <Compile Include="FlourineFx-3.5\Json\StringBuffer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\BasicScopeEnumerator.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Constants.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Event\IEvent.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Event\IEventDispatcher.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Event\IEventHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Event\IEventListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Event\IEventObservable.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IAttributeStore.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IBandwidthConfigure.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IBasicScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IBWControllable.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IClient.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IClientListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IClientRegistry.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IConnectionBWConfig.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\ICoreObject.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IEndpointPushHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IGlobalScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IMessageClient.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IMessageClientListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IScopeAware.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IScopeContext.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IScopeHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IScopeResolver.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IScopeService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IServiceCapableConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\IServiceContainer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\ISession.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\ISessionListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\AbstractPipe.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IConsumer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IMessageComponent.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IMessageInput.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IMessageOutput.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\InMemoryPullPullPipe.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\InMemoryPushPushPipe.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IPassive.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IPipe.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IPipeConnectionListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IPullableProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\IPushableConsumer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\OOBControlMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Messaging\PipeConnectionEvent.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Persistence\IPersistable.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Persistence\IPersistenceStore.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\ScopeNotFoundException.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\ScopeShuttingDownException.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\ServiceContainer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Service\IPendingServiceCall.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Service\IPendingServiceCallback.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Service\IServiceCall.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Service\IServiceHandlerProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Service\IServiceInvoker.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Service\ServiceUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\SO\ISharedObject.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\SO\ISharedObjectHandlerProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\SO\ISharedObjectListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\SO\ISharedObjectSecurity.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\SO\ISharedObjectSecurityService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\SO\ISharedObjectService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\IClientBroadcastStreamStatistics.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\IPlaylistSubscriberStreamStatistics.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\IScopeStatistics.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\IStatisticsBase.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\IStatisticsCounter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\IStatisticsService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\IStreamStatistics.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Statistics\StatisticsCounter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IAudioStreamCodec.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IBroadcastStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IClientBroadcastStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IClientStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\INetStreamEventHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IPlayItem.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IPlaylist.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IPlaylistController.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IPlaylistSubscriberStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IServerStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\ISingleItemSubscriberStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamAwareScopeHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamCapableConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamCodecInfo.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamFilenameGenerator.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamPacket.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamPlaybackSecurity.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamPublishSecurity.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamSecurityService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IStreamService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\ISubscriberStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\IVideoStreamCodec.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\Support\DenyAllStreamAccess.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Api\Stream\Support\SimplePlayItem.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\AttributeStore.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\BaseConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\BasicScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Client.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\ClientManager.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Config\MetadataSettings.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Config\ServicesConfiguration.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Destination.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\DotNetFactory.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\DotNetFactoryInstance.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\AMFContext.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\AMFEndpoint.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\EndpointBase.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\EndpointPushNotifier.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\AbstractFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\AuthenticationFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\CacheFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\ContextFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\DebugFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\DescribeServiceFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\DeserializationFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\FilterChain.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\IFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\MessageFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\ProcessFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\SerializationFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\ServiceMapFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\Filter\WsdlFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\IEndpoint.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\RemotingConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\RtmpEndpoint.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\RtmptEndpoint.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\SecureAmfEndpoint.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\SecureRtmpEndpoint.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Endpoints\StreamingAmfEndpoint.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\FactoryInstance.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\GlobalScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\IFlexFactory.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\MessageBroker.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\MessageClient.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\MessageDestination.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\MessageException.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\MessageServer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\AcknowledgeMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\AsyncMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\BinaryMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\CommandMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\ErrorMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\IMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\MessageBase.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Messages\RemotingMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\PersistableAttributeStore.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmpt\RtmptConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmpt\RtmptRequest.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmpt\RtmptServer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\BaseRtmpHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\CoreHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\DeferredResult.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\AudioData.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\BaseEvent.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\BytesRead.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\ChunkSize.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\ClientBW.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\FlexInvoke.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\FlexStreamSend.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\Invoke.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\IRtmpEvent.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\Notify.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\Ping.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\ServerBW.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\Unknown.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Event\VideoData.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\HandshakeFailedException.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\BaseStreamableFileService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\Flv\FlvService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\Flv\IFlvService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\IStreamableFileFactory.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\IStreamableFileService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\M4a\IM4aService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\M4a\M4aService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\Mp3\IMp3Service.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\Mp3\Mp3Service.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\Mp4\IMp4Service.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\Mp4\Mp4Service.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IO\StreamableFileFactory.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\IRtmpHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Messaging\IFilter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Persistence\FileStore.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Persistence\MemoryStore.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Persistence\PersistenceUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpChannel.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpConstants.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpContext.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpHandshake.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpHeader.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpNetworkStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpPacket.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpProtocolDecoder.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpProtocolEncoder.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpQueuedWriteStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpReader.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpServer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpServerConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpSocketListener.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmptProtocolDecoder.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmptProtocolEncoder.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\RtmpWriter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\ScopeContext.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\ScopeResolver.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\ScopeUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Service\Call.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Service\IServiceResolver.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Service\PendingCall.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Service\ServiceInvoker.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\FlexSharedObjectMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\ISharedObjectEvent.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\ISharedObjectMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\SharedObject.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\SharedObjectEvent.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\SharedObjectMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\SharedObjectScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\SharedObjectService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\SO\SharedObjectTypeMapping.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\StatusASO.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\AbstractClientStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\AbstractStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\BroadcastScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\BroadcastStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\ClientBroadcastStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Codec\AVCVideo.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Codec\ScreenVideo.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Codec\SorensonVideo.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Codec\StreamCodecInfo.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Codec\VideoCodec.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\ConsumerService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Consumer\ConnectionConsumer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Consumer\FileConsumer.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\DefaultStreamFilenameGenerator.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\DummyBWControlService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IBroadcastScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IBWControlContext.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IBWControlService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IConsumerService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IFrameDropper.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IProviderService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\ISeekableProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IStreamData.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\IStreamTypeAwareProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\ITokenBucket.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Messages\ResetMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Messages\RtmpMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Messages\StatusMessage.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\OutputStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\PlayEngine.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\PlaylistSubscriberStream.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\ProviderService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\Provider\FileProvider.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\SimpleBWControlService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\SimplePlaylistController.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\StreamNotFoundException.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\StreamService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\StreamTracker.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\VideoCodecFactory.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\Stream\VideoFrameDropper.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Rtmp\WebScope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Scope.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Server\AbstractScopeAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Server\ApplicationAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Server\BWCheck.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Server\IApplication.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Server\StatefulScopeWrappingAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\ServiceException.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\AuthenticationService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\IService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\MessageService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\Messaging\MessagingAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\Messaging\MsmqAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\Messaging\Selector.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\Messaging\SubscriptionManager.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\Messaging\Subtopic.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\RemotingService.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\Remoting\RemotingAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\Remoting\RemotingDestination.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\ServiceAdapter.cs" />
+    <Compile Include="FlourineFx-3.5\Messaging\Services\ServiceBase.cs" />
+    <Compile Include="FlourineFx-3.5\MethodHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Net\Fault.cs" />
+    <Compile Include="FlourineFx-3.5\Net\INetConnectionClient.cs" />
+    <Compile Include="FlourineFx-3.5\Net\MetaDataEventArgs.cs" />
+    <Compile Include="FlourineFx-3.5\Net\NetConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Net\NetStatusEventArgs.cs" />
+    <Compile Include="FlourineFx-3.5\Net\NetStream.cs" />
+    <Compile Include="FlourineFx-3.5\Net\NetStreamAudioEventArgs.cs" />
+    <Compile Include="FlourineFx-3.5\Net\NetStreamVideoEventArgs.cs" />
+    <Compile Include="FlourineFx-3.5\Net\PlayStatusEventArgs.cs" />
+    <Compile Include="FlourineFx-3.5\Net\RemoteSharedObject.cs" />
+    <Compile Include="FlourineFx-3.5\Net\RemotingClient.cs" />
+    <Compile Include="FlourineFx-3.5\Net\Responder.cs" />
+    <Compile Include="FlourineFx-3.5\Net\RtmpClient.cs" />
+    <Compile Include="FlourineFx-3.5\Net\RtmpClientConnection.cs" />
+    <Compile Include="FlourineFx-3.5\Net\SendMessageEventArgs.cs" />
+    <Compile Include="FlourineFx-3.5\Net\SyncEvent.cs" />
+    <Compile Include="FlourineFx-3.5\ObjectFactory.cs" />
+    <Compile Include="FlourineFx-3.5\PageableResult.cs" />
+    <Compile Include="FlourineFx-3.5\PagingContext.cs" />
+    <Compile Include="FlourineFx-3.5\Reflection\ConstructorExtensions.cs" />
+    <Compile Include="FlourineFx-3.5\Reflection\Lightweight\AbstractEmitter.cs" />
+    <Compile Include="FlourineFx-3.5\Reflection\Lightweight\CtorInvocationEmitter.cs" />
+    <Compile Include="FlourineFx-3.5\Reflection\Lightweight\Delegates.cs" />
+    <Compile Include="FlourineFx-3.5\Reflection\Lightweight\EmitHelper.cs" />
+    <Compile Include="FlourineFx-3.5\Reflection\Lightweight\GenericBinder.cs" />
+    <Compile Include="FlourineFx-3.5\Reflection\Lightweight\InvocationEmitter.cs" />
+    <Compile Include="FlourineFx-3.5\RequestHandlers.cs" />
+    <Compile Include="FlourineFx-3.5\RtmptHandler.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\IScheduledJob.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\ISchedulingService.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\JobExecutionException.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\MisfireInstruction.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\ScheduledJob.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\ScheduledJobContext.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\SchedulerException.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\SchedulerInstruction.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\SchedulingService.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\Trigger.cs" />
+    <Compile Include="FlourineFx-3.5\Scheduling\TriggerFiredBundle.cs" />
+    <Compile Include="FlourineFx-3.5\Security\GenericLoginCommand.cs" />
+    <Compile Include="FlourineFx-3.5\Security\ILoginCommand.cs" />
+    <Compile Include="FlourineFx-3.5\Security\LoginManager.cs" />
+    <Compile Include="FlourineFx-3.5\Silverlight\PolicyServer.cs" />
+    <Compile Include="FlourineFx-3.5\StringWriterWithEncoding.cs" />
+    <Compile Include="FlourineFx-3.5\Threading\FastReaderWriterLock.cs" />
+    <Compile Include="FlourineFx-3.5\Threading\ThreadPoolEx.cs" />
+    <Compile Include="FlourineFx-3.5\Threading\ThreadPoolStartInfo.cs" />
+    <Compile Include="FlourineFx-3.5\Threading\WorkItem.cs" />
+    <Compile Include="FlourineFx-3.5\Threading\WorkItemsQueue.cs" />
+    <Compile Include="FlourineFx-3.5\TypeHelper.cs" />
+    <Compile Include="FlourineFx-3.5\Util\ArrayUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\AsyncResult.cs" />
+    <Compile Include="FlourineFx-3.5\Util\AsyncResultNoResult.cs" />
+    <Compile Include="FlourineFx-3.5\Util\AtomicInteger.cs" />
+    <Compile Include="FlourineFx-3.5\Util\AtomicLong.cs" />
+    <Compile Include="FlourineFx-3.5\Util\BufferPool.cs" />
+    <Compile Include="FlourineFx-3.5\Util\BufferStreamReader.cs" />
+    <Compile Include="FlourineFx-3.5\Util\ByteBuffer.cs" />
+    <Compile Include="FlourineFx-3.5\Util\CollectionUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\CompareUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\Convert.cs" />
+    <Compile Include="FlourineFx-3.5\Util\DataTableSchemaImporterExtension.cs" />
+    <Compile Include="FlourineFx-3.5\Util\DateTimeUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\DisposableBase.cs" />
+    <Compile Include="FlourineFx-3.5\Util\DumpContext.cs" />
+    <Compile Include="FlourineFx-3.5\Util\IndentedTextWriter.cs" />
+    <Compile Include="FlourineFx-3.5\Util\InvariantStringArray.cs" />
+    <Compile Include="FlourineFx-3.5\Util\Layouter.cs" />
+    <Compile Include="FlourineFx-3.5\Util\MiscellaneousUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\NetworkUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\Nullables\INullableType.cs" />
+    <Compile Include="FlourineFx-3.5\Util\Nullables\NullableDateTime.cs" />
+    <Compile Include="FlourineFx-3.5\Util\NumberUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\ObjectPool.cs" />
+    <Compile Include="FlourineFx-3.5\Util\PathUtil.cs" />
+    <Compile Include="FlourineFx-3.5\Util\ReflectionUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\StringUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\ThreadingUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\Unreferenced.cs" />
+    <Compile Include="FlourineFx-3.5\Util\UriBase.cs" />
+    <Compile Include="FlourineFx-3.5\Util\ValidationUtils.cs" />
+    <Compile Include="FlourineFx-3.5\Util\WsdlHelper.cs" />
+    <Compile Include="FlourineFx-3.5\Util\ZlibStream.cs" />
+    <Compile Include="FlourineFx-3.5\__Res.cs" />
+    <Compile Include="Gui\CertificateHolder.cs" />
+    <Compile Include="Gui\Controls\StatsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\StatsControl.Designer.cs">
+      <DependentUpon>StatsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\LoadDataEnum.cs" />
+    <Compile Include="Gui\MainSettings.cs" />
+    <Compile Include="Gui\PlayerCache.cs" />
+    <Compile Include="log4net\Appender\AdoNetAppender.cs" />
+    <Compile Include="log4net\Appender\AnsiColorTerminalAppender.cs" />
+    <Compile Include="log4net\Appender\AppenderCollection.cs" />
+    <Compile Include="log4net\Appender\AppenderSkeleton.cs" />
+    <Compile Include="log4net\Appender\AspNetTraceAppender.cs" />
+    <Compile Include="log4net\Appender\BufferingAppenderSkeleton.cs" />
+    <Compile Include="log4net\Appender\BufferingForwardingAppender.cs" />
+    <Compile Include="log4net\Appender\ColoredConsoleAppender.cs" />
+    <Compile Include="log4net\Appender\ConsoleAppender.cs" />
+    <Compile Include="log4net\Appender\DebugAppender.cs" />
+    <Compile Include="log4net\Appender\EventLogAppender.cs" />
+    <Compile Include="log4net\Appender\FileAppender.cs" />
+    <Compile Include="log4net\Appender\ForwardingAppender.cs" />
+    <Compile Include="log4net\Appender\IAppender.cs" />
+    <Compile Include="log4net\Appender\IBulkAppender.cs" />
+    <Compile Include="log4net\Appender\LocalSyslogAppender.cs" />
+    <Compile Include="log4net\Appender\MemoryAppender.cs" />
+    <Compile Include="log4net\Appender\NetSendAppender.cs" />
+    <Compile Include="log4net\Appender\OutputDebugStringAppender.cs" />
+    <Compile Include="log4net\Appender\RemoteSyslogAppender.cs" />
+    <Compile Include="log4net\Appender\RemotingAppender.cs" />
+    <Compile Include="log4net\Appender\RollingFileAppender.cs" />
+    <Compile Include="log4net\Appender\SmtpAppender.cs" />
+    <Compile Include="log4net\Appender\SmtpPickupDirAppender.cs" />
+    <Compile Include="log4net\Appender\TelnetAppender.cs" />
+    <Compile Include="log4net\Appender\TextWriterAppender.cs" />
+    <Compile Include="log4net\Appender\TraceAppender.cs" />
+    <Compile Include="log4net\Appender\UdpAppender.cs" />
+    <Compile Include="log4net\AssemblyInfo.cs" />
+    <Compile Include="log4net\AssemblyVersionInfo.cs" />
+    <Compile Include="log4net\Config\AliasDomainAttribute.cs" />
+    <Compile Include="log4net\Config\AliasRepositoryAttribute.cs" />
+    <Compile Include="log4net\Config\BasicConfigurator.cs" />
+    <Compile Include="log4net\Config\ConfiguratorAttribute.cs" />
+    <Compile Include="log4net\Config\DomainAttribute.cs" />
+    <Compile Include="log4net\Config\DOMConfigurator.cs" />
+    <Compile Include="log4net\Config\DOMConfiguratorAttribute.cs" />
+    <Compile Include="log4net\Config\Log4NetConfigurationSectionHandler.cs" />
+    <Compile Include="log4net\Config\PluginAttribute.cs" />
+    <Compile Include="log4net\Config\RepositoryAttribute.cs" />
+    <Compile Include="log4net\Config\SecurityContextProviderAttribute.cs" />
+    <Compile Include="log4net\Config\XmlConfigurator.cs" />
+    <Compile Include="log4net\Config\XmlConfiguratorAttribute.cs" />
+    <Compile Include="log4net\Core\CompactRepositorySelector.cs" />
+    <Compile Include="log4net\Core\DefaultRepositorySelector.cs" />
+    <Compile Include="log4net\Core\ErrorCode.cs" />
+    <Compile Include="log4net\Core\ExceptionEvaluator.cs" />
+    <Compile Include="log4net\Core\IAppenderAttachable.cs" />
+    <Compile Include="log4net\Core\IErrorHandler.cs" />
+    <Compile Include="log4net\Core\IFixingRequired.cs" />
+    <Compile Include="log4net\Core\ILogger.cs" />
+    <Compile Include="log4net\Core\ILoggerWrapper.cs" />
+    <Compile Include="log4net\Core\IOptionHandler.cs" />
+    <Compile Include="log4net\Core\IRepositorySelector.cs" />
+    <Compile Include="log4net\Core\ITriggeringEventEvaluator.cs" />
+    <Compile Include="log4net\Core\Level.cs" />
+    <Compile Include="log4net\Core\LevelCollection.cs" />
+    <Compile Include="log4net\Core\LevelEvaluator.cs" />
+    <Compile Include="log4net\Core\LevelMap.cs" />
+    <Compile Include="log4net\Core\LocationInfo.cs" />
+    <Compile Include="log4net\Core\LogException.cs" />
+    <Compile Include="log4net\Core\LoggerManager.cs" />
+    <Compile Include="log4net\Core\LoggerWrapperImpl.cs" />
+    <Compile Include="log4net\Core\LoggingEvent.cs" />
+    <Compile Include="log4net\Core\LogImpl.cs" />
+    <Compile Include="log4net\Core\SecurityContext.cs" />
+    <Compile Include="log4net\Core\SecurityContextProvider.cs" />
+    <Compile Include="log4net\Core\TimeEvaluator.cs" />
+    <Compile Include="log4net\Core\WrapperMap.cs" />
+    <Compile Include="log4net\DateFormatter\AbsoluteTimeDateFormatter.cs" />
+    <Compile Include="log4net\DateFormatter\DateTimeDateFormatter.cs" />
+    <Compile Include="log4net\DateFormatter\IDateFormatter.cs" />
+    <Compile Include="log4net\DateFormatter\Iso8601DateFormatter.cs" />
+    <Compile Include="log4net\DateFormatter\SimpleDateFormatter.cs" />
+    <Compile Include="log4net\Filter\DenyAllFilter.cs" />
+    <Compile Include="log4net\Filter\FilterDecision.cs" />
+    <Compile Include="log4net\Filter\FilterSkeleton.cs" />
+    <Compile Include="log4net\Filter\IFilter.cs" />
+    <Compile Include="log4net\Filter\LevelMatchFilter.cs" />
+    <Compile Include="log4net\Filter\LevelRangeFilter.cs" />
+    <Compile Include="log4net\Filter\LoggerMatchFilter.cs" />
+    <Compile Include="log4net\Filter\MdcFilter.cs" />
+    <Compile Include="log4net\Filter\NdcFilter.cs" />
+    <Compile Include="log4net\Filter\PropertyFilter.cs" />
+    <Compile Include="log4net\Filter\StringMatchFilter.cs" />
+    <Compile Include="log4net\GlobalContext.cs" />
+    <Compile Include="log4net\ILog.cs" />
+    <Compile Include="log4net\Layout\ExceptionLayout.cs" />
+    <Compile Include="log4net\Layout\ILayout.cs" />
+    <Compile Include="log4net\Layout\IRawLayout.cs" />
+    <Compile Include="log4net\Layout\Layout2RawLayoutAdapter.cs" />
+    <Compile Include="log4net\Layout\LayoutSkeleton.cs" />
+    <Compile Include="log4net\Layout\PatternLayout.cs" />
+    <Compile Include="log4net\Layout\Pattern\AppDomainPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\AspNetCachePatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\AspNetContextPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\AspNetPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\AspNetRequestPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\AspNetSessionPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\DatePatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\ExceptionPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\FileLocationPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\FullLocationPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\IdentityPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\LevelPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\LineLocationPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\LoggerPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\MessagePatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\MethodLocationPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\NamedPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\NdcPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\PatternLayoutConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\PropertyPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\RelativeTimePatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\StackTraceDetailPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\StackTracePatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\ThreadPatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\TypeNamePatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\UserNamePatternConverter.cs" />
+    <Compile Include="log4net\Layout\Pattern\UtcDatePatternConverter.cs" />
+    <Compile Include="log4net\Layout\RawLayoutConverter.cs" />
+    <Compile Include="log4net\Layout\RawPropertyLayout.cs" />
+    <Compile Include="log4net\Layout\RawTimeStampLayout.cs" />
+    <Compile Include="log4net\Layout\RawUtcTimeStampLayout.cs" />
+    <Compile Include="log4net\Layout\SimpleLayout.cs" />
+    <Compile Include="log4net\Layout\XMLLayout.cs" />
+    <Compile Include="log4net\Layout\XMLLayoutBase.cs" />
+    <Compile Include="log4net\Layout\XmlLayoutSchemaLog4j.cs" />
+    <Compile Include="log4net\LogicalThreadContext.cs" />
+    <Compile Include="log4net\LogManager.cs" />
+    <Compile Include="log4net\MDC.cs" />
+    <Compile Include="log4net\NDC.cs" />
+    <Compile Include="log4net\ObjectRenderer\DefaultRenderer.cs" />
+    <Compile Include="log4net\ObjectRenderer\IObjectRenderer.cs" />
+    <Compile Include="log4net\ObjectRenderer\RendererMap.cs" />
+    <Compile Include="log4net\Plugin\IPlugin.cs" />
+    <Compile Include="log4net\Plugin\IPluginFactory.cs" />
+    <Compile Include="log4net\Plugin\PluginCollection.cs" />
+    <Compile Include="log4net\Plugin\PluginMap.cs" />
+    <Compile Include="log4net\Plugin\PluginSkeleton.cs" />
+    <Compile Include="log4net\Plugin\RemoteLoggingServerPlugin.cs" />
+    <Compile Include="log4net\Repository\ConfigurationChangedEventArgs.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\DefaultLoggerFactory.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\Hierarchy.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\ILoggerFactory.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\Logger.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\LoggerKey.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\ProvisionNode.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\RootLogger.cs" />
+    <Compile Include="log4net\Repository\Hierarchy\XmlHierarchyConfigurator.cs" />
+    <Compile Include="log4net\Repository\IBasicRepositoryConfigurator.cs" />
+    <Compile Include="log4net\Repository\ILoggerRepository.cs" />
+    <Compile Include="log4net\Repository\IXmlRepositoryConfigurator.cs" />
+    <Compile Include="log4net\Repository\LoggerRepositorySkeleton.cs" />
+    <Compile Include="log4net\ThreadContext.cs" />
+    <Compile Include="log4net\Util\AppenderAttachedImpl.cs" />
+    <Compile Include="log4net\Util\CompositeProperties.cs" />
+    <Compile Include="log4net\Util\ContextPropertiesBase.cs" />
+    <Compile Include="log4net\Util\ConverterInfo.cs" />
+    <Compile Include="log4net\Util\CountingQuietTextWriter.cs" />
+    <Compile Include="log4net\Util\CyclicBuffer.cs" />
+    <Compile Include="log4net\Util\EmptyCollection.cs" />
+    <Compile Include="log4net\Util\EmptyDictionary.cs" />
+    <Compile Include="log4net\Util\FormattingInfo.cs" />
+    <Compile Include="log4net\Util\GlobalContextProperties.cs" />
+    <Compile Include="log4net\Util\LevelMapping.cs" />
+    <Compile Include="log4net\Util\LevelMappingEntry.cs" />
+    <Compile Include="log4net\Util\LogicalThreadContextProperties.cs" />
+    <Compile Include="log4net\Util\LogLog.cs" />
+    <Compile Include="log4net\Util\NativeError.cs" />
+    <Compile Include="log4net\Util\NullDictionaryEnumerator.cs" />
+    <Compile Include="log4net\Util\NullEnumerator.cs" />
+    <Compile Include="log4net\Util\NullSecurityContext.cs" />
+    <Compile Include="log4net\Util\OnlyOnceErrorHandler.cs" />
+    <Compile Include="log4net\Util\OptionConverter.cs" />
+    <Compile Include="log4net\Util\PatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternParser.cs" />
+    <Compile Include="log4net\Util\PatternString.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\AppDomainPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\DatePatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\EnvironmentFolderPathPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\EnvironmentPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\IdentityPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\LiteralPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\NewLinePatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\ProcessIdPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\PropertyPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\RandomStringPatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\UserNamePatternConverter.cs" />
+    <Compile Include="log4net\Util\PatternStringConverters\UtcDatePatternConverter.cs" />
+    <Compile Include="log4net\Util\PropertiesDictionary.cs" />
+    <Compile Include="log4net\Util\PropertyEntry.cs" />
+    <Compile Include="log4net\Util\ProtectCloseTextWriter.cs" />
+    <Compile Include="log4net\Util\QuietTextWriter.cs" />
+    <Compile Include="log4net\Util\ReaderWriterLock.cs" />
+    <Compile Include="log4net\Util\ReadOnlyPropertiesDictionary.cs" />
+    <Compile Include="log4net\Util\ReusableStringWriter.cs" />
+    <Compile Include="log4net\Util\SystemInfo.cs" />
+    <Compile Include="log4net\Util\SystemStringFormat.cs" />
+    <Compile Include="log4net\Util\TextWriterAdapter.cs" />
+    <Compile Include="log4net\Util\ThreadContextProperties.cs" />
+    <Compile Include="log4net\Util\ThreadContextStack.cs" />
+    <Compile Include="log4net\Util\ThreadContextStacks.cs" />
+    <Compile Include="log4net\Util\Transform.cs" />
+    <Compile Include="log4net\Util\TypeConverters\BooleanConverter.cs" />
+    <Compile Include="log4net\Util\TypeConverters\ConversionNotSupportedException.cs" />
+    <Compile Include="log4net\Util\TypeConverters\ConverterRegistry.cs" />
+    <Compile Include="log4net\Util\TypeConverters\EncodingConverter.cs" />
+    <Compile Include="log4net\Util\TypeConverters\IConvertFrom.cs" />
+    <Compile Include="log4net\Util\TypeConverters\IConvertTo.cs" />
+    <Compile Include="log4net\Util\TypeConverters\IPAddressConverter.cs" />
+    <Compile Include="log4net\Util\TypeConverters\PatternLayoutConverter.cs" />
+    <Compile Include="log4net\Util\TypeConverters\PatternStringConverter.cs" />
+    <Compile Include="log4net\Util\TypeConverters\TypeConverter.cs" />
+    <Compile Include="log4net\Util\TypeConverters\TypeConverterAttribute.cs" />
+    <Compile Include="log4net\Util\WindowsSecurityContext.cs" />
+    <Compile Include="Messages\Account\AccountSummary.cs" />
+    <Compile Include="Messages\Account\AllSummonerData.cs" />
+    <Compile Include="Messages\Account\LoginDataPacket.cs" />
+    <Compile Include="Messages\Account\Session.cs" />
+    <Compile Include="Messages\Account\SummonerData.cs" />
+    <Compile Include="Messages\Broadcast\BroadcastMessage.cs" />
+    <Compile Include="Messages\Champion\ChampionDTO.cs" />
+    <Compile Include="Messages\Champion\ChampionDTOList.cs" />
+    <Compile Include="Messages\Champion\ChampionSkinDTOList.cs" />
+    <Compile Include="Messages\Champion\ChampionSkinDTO.cs" />
+    <Compile Include="Messages\Commands\PlayerCommands.cs" />
+    <Compile Include="Messages\GameLobby\PlatformGameLifecycleDTO.cs" />
+    <Compile Include="Messages\GameLobby\PlayerChampionSelectionDTO.cs" />
+    <Compile Include="Messages\GameLobby\PlayerChampionSelectionDTOList.cs" />
+    <Compile Include="Messages\Game\GameMapEnabledDTO.cs" />
+    <Compile Include="Messages\Game\QueueThrottleDTO.cs" />
+    <Compile Include="Messages\League\LeagueItemDTO.cs" />
+    <Compile Include="Messages\League\LeagueItemDTOList.cs" />
+    <Compile Include="Messages\League\LeagueListDTO.cs" />
+    <Compile Include="Messages\League\LeagueListDTOList.cs" />
+    <Compile Include="Messages\League\SummonerLeaguesDTO.cs" />
+    <Compile Include="Messages\Statistics\AggregatedStat.cs" />
+    <Compile Include="Messages\Statistics\AggregatedStatList.cs" />
+    <Compile Include="Messages\Statistics\ChampionStatInfo.cs" />
+    <Compile Include="Messages\Statistics\ChampionStatInfoList.cs" />
+    <Compile Include="Messages\Statistics\AggregatedStats.cs" />
+    <Compile Include="Messages\Statistics\FellowPlayerInfo.cs" />
+    <Compile Include="Messages\Statistics\FellowPlayerInfoList.cs" />
+    <Compile Include="Messages\Statistics\PlayerGameStatsList.cs" />
+    <Compile Include="Messages\Statistics\PlayerGameStats.cs" />
+    <Compile Include="Messages\Statistics\PlayerLifetimeStats.cs" />
+    <Compile Include="Messages\Statistics\PlayerStatSummaries.cs" />
+    <Compile Include="Messages\Statistics\PlayerStatSummary.cs" />
+    <Compile Include="Messages\Statistics\PlayerStatSummaryList.cs" />
+    <Compile Include="Messages\Statistics\RawStat.cs" />
+    <Compile Include="Messages\Statistics\RawStatList.cs" />
+    <Compile Include="Messages\Statistics\RecentGames.cs" />
+    <Compile Include="Messages\Summoner\PublicSummoner.cs" />
+    <Compile Include="Messages\Summoner\SlotEntry.cs" />
+    <Compile Include="Messages\Summoner\SlotEntryList.cs" />
+    <Compile Include="Messages\Summoner\SpellBookPage.cs" />
+    <Compile Include="Messaging\Messages\AbstractMessage.cs" />
+    <Compile Include="Messaging\Messages\AcknowledgeMessage.cs" />
+    <Compile Include="Gui\Controls\TeamControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\TeamControl.Designer.cs">
+      <DependentUpon>TeamControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flash\LogReader.cs" />
+    <Compile Include="Messages\GameStats\EndOfGameStats.cs" />
+    <Compile Include="Messages\GameStats\GameItems.cs" />
+    <Compile Include="Messaging\Messages\AsyncMessage.cs" />
+    <Compile Include="Messaging\Messages\BroadcastNotification.cs" />
+    <Compile Include="Messaging\Messages\ClientSystemStatesNotification.cs" />
+    <Compile Include="Messaging\Messages\CommandMessage.cs" />
+    <Compile Include="Messaging\Messages\DSA.cs" />
+    <Compile Include="Messaging\Messages\DSC.cs" />
+    <Compile Include="Messaging\Messages\DSK.cs" />
+    <Compile Include="Messaging\IMessageProcessor.cs" />
+    <Compile Include="NotMissing\CConsole.cs" />
+    <Compile Include="NotMissing\CloneExt.cs" />
+    <Compile Include="NotMissing\DB\DbExt.cs" />
+    <Compile Include="NotMissing\DB\IQueryBuilder.cs" />
+    <Compile Include="NotMissing\DB\SqlColumn.cs" />
+    <Compile Include="NotMissing\DB\SqliteQueryCreator.cs" />
+    <Compile Include="NotMissing\DB\SqlTable.cs" />
+    <Compile Include="NotMissing\DisposeList.cs" />
+    <Compile Include="NotMissing\HandlerList.cs" />
+    <Compile Include="NotMissing\HttpExt.cs" />
+    <Compile Include="NotMissing\HttpRequest.cs" />
+    <Compile Include="NotMissing\HttpUtil.cs" />
+    <Compile Include="NotMissing\Json\Bson\BsonBinaryType.cs" />
+    <Compile Include="NotMissing\Json\Bson\BsonBinaryWriter.cs" />
+    <Compile Include="NotMissing\Json\Bson\BsonObjectId.cs" />
+    <Compile Include="NotMissing\Json\Bson\BsonReader.cs" />
+    <Compile Include="NotMissing\Json\Bson\BsonToken.cs" />
+    <Compile Include="NotMissing\Json\Bson\BsonType.cs" />
+    <Compile Include="NotMissing\Json\Bson\BsonWriter.cs" />
+    <Compile Include="NotMissing\Json\ConstructorHandling.cs" />
+    <Compile Include="NotMissing\Json\Converters\BinaryConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\BsonObjectIdConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\CustomCreationConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\DataSetConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\DataTableConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\DateTimeConverterBase.cs" />
+    <Compile Include="NotMissing\Json\Converters\EntityKeyMemberConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\ExpandoObjectConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\IsoDateTimeConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\JavaScriptDateTimeConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\JsonDateTimeSerializationMode.cs" />
+    <Compile Include="NotMissing\Json\Converters\KeyValuePairConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\RegexConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\StringEnumConverter.cs" />
+    <Compile Include="NotMissing\Json\Converters\XmlNodeConverter.cs" />
+    <Compile Include="NotMissing\Json\DefaultValueHandling.cs" />
+    <Compile Include="NotMissing\Json\FormatterAssemblyStyle.cs" />
+    <Compile Include="NotMissing\Json\IJsonLineInfo.cs" />
+    <Compile Include="NotMissing\Json\JsonArrayAttribute.cs" />
+    <Compile Include="NotMissing\Json\JsonConstructorAttribute.cs" />
+    <Compile Include="NotMissing\Json\JsonContainerAttribute.cs" />
+    <Compile Include="NotMissing\Json\JsonConvert.cs" />
+    <Compile Include="NotMissing\Json\JsonConverter.cs" />
+    <Compile Include="NotMissing\Json\JsonConverterAttribute.cs" />
+    <Compile Include="NotMissing\Json\JsonConverterCollection.cs" />
+    <Compile Include="NotMissing\Json\JsonIgnoreAttribute.cs" />
+    <Compile Include="NotMissing\Json\JsonObjectAttribute.cs" />
+    <Compile Include="NotMissing\Json\JsonPropertyAttribute.cs" />
+    <Compile Include="NotMissing\Json\JsonReader.cs" />
+    <Compile Include="NotMissing\Json\JsonReaderException.cs" />
+    <Compile Include="NotMissing\Json\JsonSerializationException.cs" />
+    <Compile Include="NotMissing\Json\JsonSerializer.cs" />
+    <Compile Include="NotMissing\Json\JsonSerializerSettings.cs" />
+    <Compile Include="NotMissing\Json\JsonTextReader.cs" />
+    <Compile Include="NotMissing\Json\JsonTextWriter.cs" />
+    <Compile Include="NotMissing\Json\JsonToken.cs" />
+    <Compile Include="NotMissing\Json\JsonValidatingReader.cs" />
+    <Compile Include="NotMissing\Json\JsonWriter.cs" />
+    <Compile Include="NotMissing\Json\JsonWriterException.cs" />
+    <Compile Include="NotMissing\Json\Linq\Extensions.cs" />
+    <Compile Include="NotMissing\Json\Linq\IJEnumerable.cs" />
+    <Compile Include="NotMissing\Json\Linq\JArray.cs" />
+    <Compile Include="NotMissing\Json\Linq\JConstructor.cs" />
+    <Compile Include="NotMissing\Json\Linq\JContainer.cs" />
+    <Compile Include="NotMissing\Json\Linq\JEnumerable.cs" />
+    <Compile Include="NotMissing\Json\Linq\JObject.cs" />
+    <Compile Include="NotMissing\Json\Linq\JPath.cs" />
+    <Compile Include="NotMissing\Json\Linq\JProperty.cs" />
+    <Compile Include="NotMissing\Json\Linq\JPropertyDescriptor.cs" />
+    <Compile Include="NotMissing\Json\Linq\JRaw.cs" />
+    <Compile Include="NotMissing\Json\Linq\JToken.cs" />
+    <Compile Include="NotMissing\Json\Linq\JTokenEqualityComparer.cs" />
+    <Compile Include="NotMissing\Json\Linq\JTokenReader.cs" />
+    <Compile Include="NotMissing\Json\Linq\JTokenType.cs" />
+    <Compile Include="NotMissing\Json\Linq\JTokenWriter.cs" />
+    <Compile Include="NotMissing\Json\Linq\JValue.cs" />
+    <Compile Include="NotMissing\Json\MemberSerialization.cs" />
+    <Compile Include="NotMissing\Json\MissingMemberHandling.cs" />
+    <Compile Include="NotMissing\Json\NullValueHandling.cs" />
+    <Compile Include="NotMissing\Json\ObjectCreationHandling.cs" />
+    <Compile Include="NotMissing\Json\PreserveReferencesHandling.cs" />
+    <Compile Include="NotMissing\Json\ReferenceLoopHandling.cs" />
+    <Compile Include="NotMissing\Json\Required.cs" />
+    <Compile Include="NotMissing\Json\Schema\Extensions.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchema.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaBuilder.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaConstants.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaException.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaGenerator.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaModel.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaModelBuilder.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaNode.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaNodeCollection.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaResolver.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaType.cs" />
+    <Compile Include="NotMissing\Json\Schema\JsonSchemaWriter.cs" />
+    <Compile Include="NotMissing\Json\Schema\UndefinedSchemaIdHandling.cs" />
+    <Compile Include="NotMissing\Json\Schema\ValidationEventArgs.cs" />
+    <Compile Include="NotMissing\Json\Schema\ValidationEventHandler.cs" />
+    <Compile Include="NotMissing\Json\SerializationBinder.cs" />
+    <Compile Include="NotMissing\Json\Serialization\CachedAttributeGetter.cs" />
+    <Compile Include="NotMissing\Json\Serialization\CamelCasePropertyNamesContractResolver.cs" />
+    <Compile Include="NotMissing\Json\Serialization\DefaultContractResolver.cs" />
+    <Compile Include="NotMissing\Json\Serialization\DefaultReferenceResolver.cs" />
+    <Compile Include="NotMissing\Json\Serialization\DefaultSerializationBinder.cs" />
+    <Compile Include="NotMissing\Json\Serialization\DynamicValueProvider.cs" />
+    <Compile Include="NotMissing\Json\Serialization\ErrorContext.cs" />
+    <Compile Include="NotMissing\Json\Serialization\ErrorEventArgs.cs" />
+    <Compile Include="NotMissing\Json\Serialization\IContractResolver.cs" />
+    <Compile Include="NotMissing\Json\Serialization\IReferenceResolver.cs" />
+    <Compile Include="NotMissing\Json\Serialization\IValueProvider.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonArrayContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonDictionaryContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonDynamicContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonFormatterConverter.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonISerializableContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonLinqContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonObjectContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonPrimitiveContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonProperty.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonPropertyCollection.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonSerializerInternalBase.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonSerializerInternalReader.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonSerializerInternalWriter.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonSerializerProxy.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonStringContract.cs" />
+    <Compile Include="NotMissing\Json\Serialization\JsonTypeReflector.cs" />
+    <Compile Include="NotMissing\Json\Serialization\LateBoundMetadataTypeAttribute.cs" />
+    <Compile Include="NotMissing\Json\Serialization\ObjectConstructor.cs" />
+    <Compile Include="NotMissing\Json\Serialization\OnErrorAttribute.cs" />
+    <Compile Include="NotMissing\Json\Serialization\ReflectionValueProvider.cs" />
+    <Compile Include="NotMissing\Json\StreamingContext.cs" />
+    <Compile Include="NotMissing\Json\TypeNameHandling.cs" />
+    <Compile Include="NotMissing\Json\Utilities\Base64Encoder.cs" />
+    <Compile Include="NotMissing\Json\Utilities\BidirectionalDictionary.cs" />
+    <Compile Include="NotMissing\Json\Utilities\CollectionUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\CollectionWrapper.cs" />
+    <Compile Include="NotMissing\Json\Utilities\ConvertUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\DateTimeUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\DictionaryWrapper.cs" />
+    <Compile Include="NotMissing\Json\Utilities\DynamicProxy.cs" />
+    <Compile Include="NotMissing\Json\Utilities\DynamicProxyMetaObject.cs" />
+    <Compile Include="NotMissing\Json\Utilities\DynamicReflectionDelegateFactory.cs" />
+    <Compile Include="NotMissing\Json\Utilities\DynamicUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\DynamicWrapper.cs" />
+    <Compile Include="NotMissing\Json\Utilities\EnumUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\EnumValue.cs" />
+    <Compile Include="NotMissing\Json\Utilities\EnumValues.cs" />
+    <Compile Include="NotMissing\Json\Utilities\ILGeneratorExtensions.cs" />
+    <Compile Include="NotMissing\Json\Utilities\JavaScriptUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\LateBoundReflectionDelegateFactory.cs" />
+    <Compile Include="NotMissing\Json\Utilities\LinqBridge.cs" />
+    <Compile Include="NotMissing\Json\Utilities\ListWrapper.cs" />
+    <Compile Include="NotMissing\Json\Utilities\MathUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\MethodCall.cs" />
+    <Compile Include="NotMissing\Json\Utilities\MiscellaneousUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\ReflectionDelegateFactory.cs" />
+    <Compile Include="NotMissing\Json\Utilities\ReflectionUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\StringBuffer.cs" />
+    <Compile Include="NotMissing\Json\Utilities\StringUtils.cs" />
+    <Compile Include="NotMissing\Json\Utilities\ThreadSafeStore.cs" />
+    <Compile Include="NotMissing\Json\Utilities\ValidationUtils.cs" />
+    <Compile Include="NotMissing\Logging\DefaultListener.cs" />
+    <Compile Include="NotMissing\Logging\ILogListener.cs" />
+    <Compile Include="NotMissing\Logging\ILogParent.cs" />
+    <Compile Include="NotMissing\Logging\Levels.cs" />
+    <Compile Include="NotMissing\Logging\Logger.cs" />
+    <Compile Include="NotMissing\Logging\LogHandler.cs" />
+    <Compile Include="NotMissing\Logging\StaticLogger.cs" />
+    <Compile Include="NotMissing\MIL\HtmlAttribute.cs" />
+    <Compile Include="NotMissing\MIL\HtmlDocument.cs" />
+    <Compile Include="NotMissing\MIL\HtmlElement.cs" />
+    <Compile Include="NotMissing\MIL\HtmlEncoder.cs" />
+    <Compile Include="NotMissing\MIL\HtmlNode.cs" />
+    <Compile Include="NotMissing\MIL\HtmlParser.cs" />
+    <Compile Include="NotMissing\MIL\HtmlText.cs" />
+    <Compile Include="NotMissing\ObjectDumper.cs" />
+    <Compile Include="NotMissing\OpenMethods.cs" />
+    <Compile Include="NotMissing\ProcessQueue.cs" />
+    <Compile Include="NotMissing\RandomExt.cs" />
+    <Compile Include="NotMissing\StreamExt.cs" />
+    <Compile Include="NotMissing\StringExt.cs" />
+    <Compile Include="NotMissing\TypeExt.cs" />
+    <Compile Include="Properties\CommitBase.cs" />
+    <Compile Include="Content\Certificates\ByteCertificates.cs" />
+    <Compile Include="Storage\PlayerEntry.cs" />
+    <Compile Include="Util\CertificateInstaller.cs" />
+    <Compile Include="Proxy\CallResultWait.cs" />
+    <Compile Include="Proxy\IProxyHost.cs" />
+    <Compile Include="Proxy\ProxyClient.cs" />
+    <Compile Include="Proxy\ProxyHost.cs" />
+    <Compile Include="Proxy\RtmpsProxyClient.cs" />
+    <Compile Include="Proxy\RtmpsProxyHost.cs" />
+    <Compile Include="Proxy\SecureProxyHost.cs" />
+    <Compile Include="Messages\GameStats\PlayerStats\PlayerStatsSummary.cs" />
+    <Compile Include="Messages\GameStats\PlayerStats\PlayerStatsSummaryList.cs" />
+    <Compile Include="Messages\GameStats\PlayerStats\PlayerStat.cs" />
+    <Compile Include="Messages\GameStats\PlayerStats\PlayerStatCategory.cs" />
+    <Compile Include="Messages\GameStats\PlayerStats\PlayerStatList.cs" />
+    <Compile Include="Flash\FlashObject.cs" />
+    <Compile Include="Messages\GameLobby\Participants\BotParticipant.cs" />
+    <Compile Include="Messages\GameLobby\GameDTO.cs" />
+    <Compile Include="Messages\GameLobby\Participants\GameParticipant.cs" />
+    <Compile Include="Messages\GameLobby\Participants\ObfuscatedParticipant.cs" />
+    <Compile Include="Messages\GameLobby\Participants\Participant.cs" />
+    <Compile Include="Flash\IFlashProcessor.cs" />
+    <Compile Include="Flash\InternalNameAttribute.cs" />
+    <Compile Include="Flash\PipeProcessor.cs" />
+    <Compile Include="Gui\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\GameLobby\Participants\PlayerParticipant.cs" />
+    <Compile Include="Gui\Controls\PlayerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Controls\PlayerControl.Designer.cs">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Flash\BaseObject.cs" />
+    <Compile Include="Messages\MessageObject.cs" />
+    <Compile Include="Messages\Translators\IObjectTranslator.cs" />
+    <Compile Include="Messages\Translators\MessageTranslator.cs" />
+    <Compile Include="Messages\MessageAttribute.cs" />
+    <Compile Include="Messages\Readers\MessageReader.cs" />
+    <Compile Include="Util\AssemblyAttributes.cs" />
+    <Compile Include="Util\Compression.cs" />
+    <Compile Include="Util\ProcessInjector.cs" />
+    <Compile Include="Util\ProcessMemory.cs" />
+    <Compile Include="Util\ProcessMonitor.cs" />
+    <Compile Include="Util\SimpleLogTimer.cs" />
+    <Compile Include="Util\SuspendLayout.cs" />
+    <Compile Include="Util\Parse.cs" />
+    <Compile Include="Flash\FlashSerializer.cs" />
+    <Compile Include="Messages\GameLobby\TeamParticipants.cs" />
+    <Compile Include="Messages\Readers\IObjectReader.cs" />
+    <Compile Include="Util\AppInit.cs" />
+    <Compile Include="Util\RtmpUtil.cs" />
+    <Compile Include="Util\Wow.cs" />
+    <None Include="FlourineFx-3.5\services-config.xml" />
+    <None Include="FlourineFx-3.5\App.config.txt" />
+    <EmbeddedResource Include="FlourineFx-3.5\Resources\Resource.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\StatsControl.resx">
+      <DependentUpon>StatsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\TeamControl.resx">
+      <DependentUpon>TeamControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Controls\PlayerControl.resx">
+      <DependentUpon>PlayerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FlourineFx-3.5\ISharedObject.cd" />
+    <None Include="FlourineFx-3.5\log4net.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Content\Data\ItemData.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Data\readme.txt" />
+    <None Include="Content\Data\ChampData.json" />
+    <None Include="Content\Data\StatsData.json" />
+    <None Include="Resources\circle_green.png" />
+    <None Include="Resources\circle_yellow.png" />
+    <None Include="Resources\circle_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+<Target Name="AfterBuild">
+</Target>
+
+  -->
+</Project>

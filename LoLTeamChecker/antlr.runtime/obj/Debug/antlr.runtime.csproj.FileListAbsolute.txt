@@ -1,0 +1,10 @@
+C:\Users\Andrew\Downloads\csharp\antlr.runtime\bin\antlr.runtime.dll
+C:\Users\Andrew\Downloads\csharp\antlr.runtime\bin\antlr.runtime.pdb
+C:\Users\Andrew\Downloads\csharp\antlr.runtime\obj\Debug\antlr.runtime.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Downloads\csharp\antlr.runtime\obj\Debug\antlr.runtime.dll
+C:\Users\Andrew\Downloads\csharp\antlr.runtime\obj\Debug\antlr.runtime.pdb
+C:\Users\Andrew\Downloads\LoLNotes-master - Copy\LoLNotes\antlr.runtime\bin\antlr.runtime.dll
+C:\Users\Andrew\Downloads\LoLNotes-master - Copy\LoLNotes\antlr.runtime\bin\antlr.runtime.pdb
+C:\Users\Andrew\Downloads\LoLNotes-master - Copy\LoLNotes\antlr.runtime\obj\Debug\antlr.runtime.csprojResolveAssemblyReference.cache
+C:\Users\Andrew\Downloads\LoLNotes-master - Copy\LoLNotes\antlr.runtime\obj\Debug\antlr.runtime.dll
+C:\Users\Andrew\Downloads\LoLNotes-master - Copy\LoLNotes\antlr.runtime\obj\Debug\antlr.runtime.pdb

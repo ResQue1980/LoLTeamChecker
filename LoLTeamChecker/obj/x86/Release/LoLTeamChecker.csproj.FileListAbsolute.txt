@@ -1,0 +1,9 @@
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\bin\Release\LoLTeamChecker.exe
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.FlourineFx_3._5.Resources.Resource.resources
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.Gui.Controls.StatsControl.resources
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.Gui.Controls.TeamControl.resources
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.Gui.MainForm.resources
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.Gui.Controls.PlayerControl.resources
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.Properties.Resources.resources
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.csproj.GenerateResource.Cache
+C:\Users\Andy\Documents\Visual Studio 2012\Projects\LoLTeamChecker\LoLTeamChecker\obj\x86\Release\LoLTeamChecker.exe
